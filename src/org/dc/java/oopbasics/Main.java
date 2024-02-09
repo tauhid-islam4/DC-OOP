@@ -1,6 +1,7 @@
 package org.dc.java.oopbasics;
 
 import java.io.IOException;
+import java.util.StringTokenizer;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -65,46 +66,136 @@ public class Main {
             return 1;
     }
 
+
+    // Method 1
+    // Concatenates to String
+    public static void concat1(String s1)
+    {
+        s1 = s1 + " College";
+    }
+
+    // Method 2
+    // Concatenates to StringBuilder
+    public static void concat2(StringBuilder s2)
+    {
+        s2.append(" College");
+    }
+
+    // Method 3
+    // Concatenates to StringBuffer
+    public static void concat3(StringBuffer s3)
+    {
+        s3.append(" College");
+    }
+
+    public static void stringTokenizer() {
+        // Constructor 1
+        System.out.println("Using Constructor 1 - ");
+
+        // Creating object of class inside main() method
+        StringTokenizer st1 = new StringTokenizer(
+                "This is OOP class");
+
+        // Condition holds true till there is single token
+        // remaining using hasMoreTokens() method
+        while (st1.hasMoreTokens())
+            // Getting next tokens
+            System.out.println(st1.nextToken());
+
+        // Constructor 2
+        System.out.println("Using Constructor 2 - ");
+
+        // Again creating object of class inside main()
+        // method
+        StringTokenizer st2 = new StringTokenizer(
+                "JAVA : Code : String", " :");
+
+        // If tokens are present
+        while (st2.hasMoreTokens())
+
+            // Print all tokens
+            System.out.println(st2.nextToken());
+
+        // Constructor 3
+        System.out.println("Using Constructor 3 - ");
+
+        // Again creating object of class inside main()
+        // method
+        StringTokenizer st3 = new StringTokenizer(
+                "JAVA : Code : String", " :", true);
+
+        while (st3.hasMoreTokens())
+            System.out.println(st3.nextToken());
+    }
     public static void main(String[] args) {
 
         // call the addNumbers method
-        addNumbers();
+//        addNumbers();
+//
+//        System.out.println("_____________________");
+//
+//        System.out.println("Squared value of 10 is: " + square(10));
+//
+//        System.out.println("_____________________");
+//
+//        // passing 3 parameters
+//        System.out.println("2 * 4 * 6 = " + passing3Parmeters(2, 4, 6));
+//
+//        System.out.println("_____________________");
+//
+//        // calling a method inside a loop
+//        for(int i = 1; i <=10; i++)
+//        {
+//            System.out.println("The square of " + i + " is " + square(i));
+//        }
+//
+//        System.out.println("_____________________");
+//        System.out.println("Overloading: Number of parameters");
+//        numberOfParameters(1);
+//        numberOfParameters(2);
+//        numberOfParameters(3);
+//        numberOfParameters(4);
+//        numberOfParameters(5, 6);
+//
+//        System.out.println("Overloading: Data type of parameters");
+//        dataTypes(1);
+//        dataTypes("Hello world!");
+//
+//        System.out.println("_____________________");
+//        System.out.println("Recursion:");
+//        int number = 4, results;
+//        results = factorial(number);
+//        System.out.println(number + " factorial = " + results);
 
-        System.out.println("_____________________");
+        // Custom input string
+        // String 1
+        String s1 = "Durham";
 
-        System.out.println("Squared value of 10 is: " + square(10));
+        // Calling above defined method
+        concat1(s1);
 
-        System.out.println("_____________________");
+        // s1 is not changed
+        System.out.println("String: " + s1);
 
-        // passing 3 parameters
-        System.out.println("2 * 4 * 6 = " + passing3Parmeters(2, 4, 6));
+        // String 1
+        StringBuilder s2 = new StringBuilder("Durham");
 
-        System.out.println("_____________________");
+        // Calling above defined method
+        concat2(s2);
 
-        // calling a method inside a loop
-        for(int i = 1; i <=10; i++)
-        {
-            System.out.println("The square of " + i + " is " + square(i));
-        }
+        // s2 is changed
+        System.out.println("StringBuilder: " + s2);
 
-        System.out.println("_____________________");
-        System.out.println("Overloading: Number of parameters");
-        numberOfParameters(1);
-        numberOfParameters(2);
-        numberOfParameters(3);
-        numberOfParameters(4);
-        numberOfParameters(5, 6);
+        // String 3
+        StringBuffer s3 = new StringBuffer("Durham");
 
-        System.out.println("Overloading: Data type of parameters");
-        dataTypes(1);
-        dataTypes("Hello world!");
+        // Calling above defined method
+        concat3(s3);
 
-        System.out.println("_____________________");
-        System.out.println("Recursion:");
-        int number = 4, results;
-        results = factorial(number);
-        System.out.println(number + " factorial = " + results);
+        // s3 is changed
+        System.out.println("StringBuffer: " + s3);
 
+        stringTokenizer();
 
     }
 
