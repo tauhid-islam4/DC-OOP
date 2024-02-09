@@ -1,9 +1,7 @@
 package org.dc.java.arrays;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -37,6 +35,10 @@ public class Main {
         Arrays.sort(countries);
         List<String> newCountriesList2 = Arrays.asList(countries);
         System.out.println(newCountriesList2);
+
+        Collections.sort(newCountriesList);
+        System.out.println(newCountriesList);
+
 
 
     }
