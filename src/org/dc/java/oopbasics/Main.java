@@ -174,6 +174,7 @@ public class Main {
         // Calling above defined method
         concat1(s1);
 
+        //s1 = s1 + " College";
         // s1 is not changed
         System.out.println("String: " + s1);
 
@@ -195,7 +196,27 @@ public class Main {
         // s3 is changed
         System.out.println("StringBuffer: " + s3);
 
-        stringTokenizer();
+        //stringTokenizer();
+
+        String str1 = "abc";
+        String str2 = "abc";
+        if (str1 == str2) {
+            System.out.println("true");
+        }
+        else
+            System.out.println("false");
+
+        String str3 = new String("abcDeF");
+        String str4 = new String("abcdEf");
+        if (str4.equalsIgnoreCase(str3) ) {
+            System.out.println("true");
+        }
+        else
+            System.out.println("false");
+
+
+
+
 
     }
 
