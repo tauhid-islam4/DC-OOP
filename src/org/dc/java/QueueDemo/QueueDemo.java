@@ -1,4 +1,4 @@
-package QueueDemo;
+package org.dc.java.QueueDemo;
 import java.util.LinkedList;
 import java.util.Queue;
 public class QueueDemo {

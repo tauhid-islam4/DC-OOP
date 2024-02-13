@@ -1,4 +1,4 @@
-package NodeDemo;
+package org.dc.java.NodeDemo;
 
 public class Node {
     private int data;

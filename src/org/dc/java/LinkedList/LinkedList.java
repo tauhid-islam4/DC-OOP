@@ -1,4 +1,4 @@
-package LinkedList;
+package org.dc.java.LinkedList;
 
 
 public class LinkedList {
