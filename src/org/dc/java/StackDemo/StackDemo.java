@@ -11,6 +11,7 @@ public class StackDemo {
         stack.push("is");
         stack.push("Goose");
 
+
         // display the stack
         System.out.println("The initial stack: " + stack);
 
