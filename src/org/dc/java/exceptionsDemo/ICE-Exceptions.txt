@@ -1,0 +1,5 @@
+1. Create a LinkedList/Stack/Queue of items (possibly Integers).
+2. Have the collection a predefined capacity.
+3. WHen the addItem() method is called to add another item to the 
+collection is called and it exceeds the capacity throw a custom 
+exception (you name the exception based on your data structure. FOr example, StackSizeExceededException) 
